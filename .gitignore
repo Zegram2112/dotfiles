@@ -1,1 +1,21 @@
 vim/.vim/bundle/*
+
+# Swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
+
+# Temporary
+*~
+*.netrwhist
+
+# Auto generated tag files
+tags
+
+# Persistent undo
+[._]*.un~
+
+# Session
+Session.vim
+

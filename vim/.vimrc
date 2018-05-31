@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -94,7 +95,7 @@ let g:lightline= {
 
 " Colorscheme
 colorscheme one
-set background=light
+" set background=light
 " set background = dark
 let g:one_allow_italics = 1
 
@@ -157,4 +158,10 @@ nnoremap <leader>s :mksession<CR>
 
 " NERDTree shortcut
 nnoremap <leader>n :NERDTreeToggle<CR>
+
+" Easier navigation 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
