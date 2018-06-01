@@ -1,1 +1,0 @@
-/home/zegram/dotfiles/vim/.vim/ftplugin/html.vim
