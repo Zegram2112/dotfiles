@@ -99,6 +99,13 @@ colorscheme one
 " set background = dark
 let g:one_allow_italics = 1
 
+" True colors
+if (empty($TMUX))
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+endif
+
 " Encoding
 set encoding=utf-8
 
