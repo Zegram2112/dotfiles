@@ -38,6 +38,8 @@ Plugin 'rakr/vim-one'
 Plugin 'mattn/emmet-vim'
 " Syntax checking
 Plugin 'scrooloose/syntastic'
+" Syntax highlight for Twig
+Plugin 'lumiliet/vim-twig'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
