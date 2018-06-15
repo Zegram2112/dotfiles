@@ -98,7 +98,7 @@ let g:lightline= {
 " Colorscheme
 colorscheme one
 " set background=light
-" set background = dark
+set background=dark
 let g:one_allow_italics = 1
 
 " True colors
