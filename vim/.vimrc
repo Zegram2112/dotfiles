@@ -40,6 +40,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 " Syntax highlight for Twig
 Plugin 'lumiliet/vim-twig'
+" Code automatic completion
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,6 +73,7 @@ set softtabstop=4
 set expandtab
 set noshiftround
 set smartindent
+set cindent
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
 set scrolloff=5
