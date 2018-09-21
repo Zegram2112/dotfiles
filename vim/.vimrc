@@ -40,8 +40,6 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 " Syntax highlight for Twig
 Plugin 'lumiliet/vim-twig'
-" Code automatic completion
-Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -99,14 +97,12 @@ let g:lightline= {
     \ }
 
 " True colors
-if (empty($TMUX))
-    if (has("termguicolors"))
-        set termguicolors
-    endif
+if exists('$TMUX')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
+set termguicolors
 set t_Co=256
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 
 " Colorscheme
 colorscheme one
