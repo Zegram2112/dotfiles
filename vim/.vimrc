@@ -72,8 +72,8 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 set noshiftround
+set autoindent
 set smartindent
-set cindent
 
 " Display 5 lines above/below the cursor when scrolling with a mouse.
 set scrolloff=5
@@ -98,18 +98,21 @@ let g:lightline= {
     \ 'colorscheme': 'one'
     \ }
 
-" Colorscheme
-colorscheme one
-" set background=light
-set background=dark
-let g:one_allow_italics = 1
-
 " True colors
 if (empty($TMUX))
     if (has("termguicolors"))
         set termguicolors
     endif
 endif
+set t_Co=256
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
+" Colorscheme
+colorscheme one
+" set background=light
+set background=dark
+let g:one_allow_italics = 1
 
 " Encoding
 set encoding=utf-8
