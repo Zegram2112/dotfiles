@@ -34,6 +34,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 " Colorscheme like atom
 Plugin 'rakr/vim-one'
+" Colorscheme ayu
+Plugin 'ayu-theme/ayu-vim'
 " Emmet implementation
 Plugin 'mattn/emmet-vim'
 " Syntax checking
@@ -105,7 +107,11 @@ set termguicolors
 set t_Co=256
 
 " Colorscheme
-colorscheme one
+" colorscheme one
+colorscheme ayu
+" let ayucolor="light"
+let ayucolor="mirage"
+" let ayucolor="dark"
 " set background=light
 set background=dark
 let g:one_allow_italics = 1
