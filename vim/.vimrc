@@ -42,6 +42,8 @@ Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 " Syntax highlight for Twig
 Plugin 'lumiliet/vim-twig'
+" Latex for vim
+Plugin 'lervag/vimtex'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -160,6 +162,14 @@ nnoremap <space> za
 
 " Fold based on indent level
 set foldmethod=indent
+
+" --- Latex ---
+
+let g:tex_favlor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 " --- Shortcuts ---
 
