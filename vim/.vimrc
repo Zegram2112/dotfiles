@@ -44,6 +44,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'lumiliet/vim-twig'
 " Latex for vim
 Plugin 'lervag/vimtex'
+" Colorscheme nord
+Plugin 'arcticicestudio/nord-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -109,8 +111,8 @@ set termguicolors
 set t_Co=256
 
 " Colorscheme
-" colorscheme one
-colorscheme ayu
+colorscheme one
+" colorscheme ayu
 " let ayucolor="light"
 let ayucolor="mirage"
 " let ayucolor="dark"
