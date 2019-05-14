@@ -99,7 +99,7 @@ set number
 " Config for statusline
 set laststatus=2
 let g:lightline= {
-    \ 'colorscheme': 'one'
+    \ 'colorscheme': 'nord'
     \ }
 
 " True colors
@@ -110,15 +110,23 @@ endif
 set termguicolors
 set t_Co=256
 
+" Background color fix
+let &t_ut=''
+
 " Colorscheme
-colorscheme one
+" colorscheme one
 " colorscheme ayu
+colorscheme nord
 " let ayucolor="light"
 let ayucolor="mirage"
 " let ayucolor="dark"
 " set background=light
 set background=dark
 let g:one_allow_italics = 1
+let g:nord_italic = 1
+let g:nord_underline = 1
+let g:nord_italic_comments = 1
+
 
 " Encoding
 set encoding=utf-8
