@@ -14,6 +14,10 @@ super + d
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# change keyboard layout
+super + space
+    {setxkbmap us , setxkbmap latam}
+
 #
 # bspwm hotkeys
 #
