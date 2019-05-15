@@ -19,6 +19,23 @@ super + space
     {setxkbmap us , setxkbmap latam}
 
 #
+# Function keys
+#
+
+# Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 5%+
+
+# Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 5%-
+
+# Mutes
+XF86AudioMute
+#amixer set Master toggle
+    amixer -D pulse set Master 1+ toggle
+
+#
 # bspwm hotkeys
 #
 
