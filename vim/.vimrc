@@ -46,6 +46,9 @@ Plugin 'lumiliet/vim-twig'
 Plugin 'lervag/vimtex'
 " Colorscheme nord
 Plugin 'arcticicestudio/nord-vim'
+" Snippets
+Plugin 'honza/vim-snippets'
+Plugin 'sirver/ultisnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -178,8 +181,15 @@ set foldmethod=indent
 let g:tex_favlor='latex'
 let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
-set conceallevel=1
+set conceallevel=0
 let g:tex_conceal='abdmg'
+
+" --- UltiSnips ---
+
+let g:UltiSnipsExpandTrigger = '<tab>'
+let g:UltiSnipsJumpForwardTrigger ='<tab>'
+let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+let g:UltiSnipsEditSplit="vertical"
 
 " --- Shortcuts ---
 
