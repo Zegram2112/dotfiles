@@ -36,8 +36,6 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'rakr/vim-one'
 " Colorscheme ayu
 Plugin 'ayu-theme/ayu-vim'
-" Emmet implementation
-Plugin 'mattn/emmet-vim'
 " Syntax checking
 Plugin 'scrooloose/syntastic'
 " Syntax highlight for Twig
@@ -47,8 +45,7 @@ Plugin 'lervag/vimtex'
 " Colorscheme nord
 Plugin 'arcticicestudio/nord-vim'
 " Snippets
-Plugin 'honza/vim-snippets'
-Plugin 'sirver/ultisnips'
+Plugin 'SirVer/ultisnips'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -189,7 +186,12 @@ let g:tex_conceal='abdmg'
 let g:UltiSnipsExpandTrigger = '<tab>'
 let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit= "horizontal"
+let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips']
+augroup ultisnips_no_auto_expansion
+    au!
+    au VimEnter * au! UltiSnips_AutoTrigger
+augroup END
 
 " --- Shortcuts ---
 
