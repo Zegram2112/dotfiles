@@ -36,6 +36,11 @@ snippet template "Basic template" b
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem*{definition}{Definición}
+\newtheorem{proposition}{Proposición}[section]
+\newtheorem*{note}{Nota}
+\newtheorem{example}{Ejemplo}[section]
 
 \begin{document}
 	$0
@@ -252,7 +257,7 @@ snippet lr( "left( right)" i
 endsnippet
 
 context "math()"
-snippet de "left( right)" iA
+snippet dee "left( right)" iA
 \!\left( ${1:${VISUAL}} \right) $0
 endsnippet
 
@@ -315,6 +320,11 @@ endsnippet
 
 snippet part "d/dx" w
 \frac{\partial ${1:V}}{\partial ${2:x}} $0
+endsnippet
+
+context "math()"
+snippet diff "d" wA
+\mathrm{d}
 endsnippet
 
 context "math()"
@@ -623,11 +633,16 @@ snippet SI "SI" iA
 \SI{$1}{$2}
 endsnippet
 
+context "math()"
+snippet funn "Function" iA
+$1: $2 \to $3
+endsnippet
+
 snippet bigfun "Big function" iA
 \begin{align*}
 	$1: $2 &\longrightarrow $3 \\\\
 	$4 &\longmapsto $1($4) = $0
-.\end{align*}
+\end{align*}
 endsnippet
 
 snippet cvec "column vector" iA
