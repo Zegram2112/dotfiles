@@ -23,7 +23,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 " Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " Install L9 and avoid a Naming conflict if you've already installed a
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
@@ -37,9 +37,10 @@ Plugin 'rakr/vim-one'
 " Colorscheme ayu
 Plugin 'ayu-theme/ayu-vim'
 " Syntax checking
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 " Syntax highlight for Twig
-Plugin 'lumiliet/vim-twig'
+" Plugin 'lumiliet/vim-twig'
 " Latex for vim
 Plugin 'lervag/vimtex'
 " Colorscheme nord
@@ -189,8 +190,8 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsEditSplit= "horizontal"
 let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips']
 augroup ultisnips_no_auto_expansion
-    au!
-    au VimEnter * au! UltiSnips_AutoTrigger
+"    au!
+"    au VimEnter * au! UltiSnips_AutoTrigger
 augroup END
 
 " --- Shortcuts ---
