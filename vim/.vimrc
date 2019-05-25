@@ -189,10 +189,14 @@ let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsEditSplit= "horizontal"
 let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips']
-augroup ultisnips_no_auto_expansion
-"    au!
-"    au VimEnter * au! UltiSnips_AutoTrigger
-augroup END
+
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == 'nicolas-pc'
+    augroup ultisnips_no_auto_expansion
+        au!
+        au VimEnter * au! UltiSnips_AutoTrigger
+    augroup END
+endif
 
 " --- Shortcuts ---
 
