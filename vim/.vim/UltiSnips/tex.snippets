@@ -291,6 +291,9 @@ snippet lra "leftangle rightangle" iA
 \left<${1:${VISUAL}} \right>$0
 endsnippet
 
+snippet dotprod "dot product" iA
+\left\langle ${1:${VISUAL}} \right\rangle$0
+
 context "math()"
 snippet conj "conjugate" iA
 \overline{$1}$0
@@ -662,7 +665,7 @@ endsnippet
 priority 10
 context "math()"
 snippet "bar" "bar" riA
-\overline{$1}$0
+\bar{$1}$0
 endsnippet
 
 priority 100
