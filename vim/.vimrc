@@ -32,10 +32,6 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'scrooloose/nerdtree'
 " Pretty bar
 Plugin 'itchyny/lightline.vim'
-" Colorscheme like atom
-Plugin 'rakr/vim-one'
-" Colorscheme ayu
-Plugin 'ayu-theme/ayu-vim'
 " Syntax checking
 " Plugin 'scrooloose/syntastic'
 Plugin 'w0rp/ale'
@@ -43,8 +39,11 @@ Plugin 'w0rp/ale'
 " Plugin 'lumiliet/vim-twig'
 " Latex for vim
 Plugin 'lervag/vimtex'
-" Colorscheme nord
+" Colorschemes
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'drewtempelmeyer/palenight.vim'
+Plugin 'ayu-theme/ayu-vim'
+Plugin 'rakr/vim-one'
 " Snippets
 Plugin 'SirVer/ultisnips'
 
@@ -100,7 +99,7 @@ set number
 " Config for statusline
 set laststatus=2
 let g:lightline= {
-    \ 'colorscheme': 'nord'
+    \ 'colorscheme': 'palenight'
     \ }
 
 " True colors
@@ -117,7 +116,8 @@ let &t_ut=''
 " Colorscheme
 " colorscheme one
 " colorscheme ayu
-colorscheme nord
+" colorscheme nord
+colorscheme palenight
 " let ayucolor="light"
 let ayucolor="mirage"
 " let ayucolor="dark"
@@ -127,7 +127,7 @@ let g:one_allow_italics = 1
 let g:nord_italic = 1
 let g:nord_underline = 1
 let g:nord_italic_comments = 1
-
+let g:palenight_terminal_italics=1
 
 " Encoding
 set encoding=utf-8
@@ -181,6 +181,10 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=0
 let g:tex_conceal='abdmg'
+
+" This requires to have inkscape-figures installed
+inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
+nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
 
 " --- UltiSnips ---
 

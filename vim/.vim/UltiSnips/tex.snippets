@@ -165,6 +165,11 @@ snippet / "Fraction" i
 endsnippet
 
 context "math()"
+snippet underr "underbrace" iA
+\\underbrace{$1}_{$2}$0
+endsnippet
+
+context "math()"
 snippet '((\d+)|(\d*)(\\)?([A-Za-z]+)((\^|_)(\{\d+\}|\d))*)/' "symbol frac" wrA
 \\frac{`!p snip.rv = match.group(1)`}{$1}$0
 endsnippet
@@ -293,6 +298,7 @@ endsnippet
 
 snippet dotprod "dot product" iA
 \left\langle ${1:${VISUAL}} \right\rangle$0
+endsnippet
 
 context "math()"
 snippet conj "conjugate" iA
@@ -671,7 +677,7 @@ endsnippet
 priority 100
 context "math()"
 snippet "([a-zA-Z])bar" "bar" riA
-\overline{`!p snip.rv=match.group(1)`}
+\bar{`!p snip.rv=match.group(1)`}
 endsnippet
 
 priority 10
