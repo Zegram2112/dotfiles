@@ -33,8 +33,8 @@ Plugin 'scrooloose/nerdtree'
 " Pretty bar
 Plugin 'itchyny/lightline.vim'
 " Syntax checking
-" Plugin 'scrooloose/syntastic'
-Plugin 'w0rp/ale'
+Plugin 'scrooloose/syntastic'
+" Plugin 'w0rp/ale'
 " Syntax highlight for Twig
 " Plugin 'lumiliet/vim-twig'
 " Latex for vim
@@ -44,6 +44,7 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'rakr/vim-one'
+Plugin 'dylanaraps/wal.vim'
 " Snippets
 Plugin 'SirVer/ultisnips'
 
@@ -63,6 +64,12 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" --- General variables ---
+
+let hostname = substitute(system('hostname'), '\n', '', '')
+
+" --- General settings ---
 
 " Turn on syntax highlighting.
 syntax on
@@ -86,6 +93,11 @@ set backspace=indent,eol,start
 
 " Speed up scrolling
 set ttyfast
+
+" Encoding
+set encoding=utf-8
+
+"--- Visuals ---
 
 " Hightlight matching pairs
 set showmatch
@@ -113,13 +125,16 @@ set t_Co=256
 " Background color fix
 let &t_ut=''
 
-" Colorscheme
-" colorscheme one
-" colorscheme ayu
-" colorscheme nord
-colorscheme palenight
-" let ayucolor="light"
-let ayucolor="mirage"
+" --- Colorschemes ---"
+
+if hostname == "nicolas-pc" || hostname == "nicolas-laptop"
+    colorscheme wal
+else
+    colorscheme palenight
+endif
+
+let ayucolor="light"
+" let ayucolor="mirage"
 " let ayucolor="dark"
 " set background=light
 set background=dark
@@ -129,8 +144,6 @@ let g:nord_underline = 1
 let g:nord_italic_comments = 1
 let g:palenight_terminal_italics=1
 
-" Encoding
-set encoding=utf-8
 
 " --- Searching ---
 
@@ -182,9 +195,12 @@ let g:vimtex_quickfix_mode=0
 set conceallevel=0
 let g:tex_conceal='abdmg'
 
-" This requires to have inkscape-figures installed
+" -- Latex: Inkscape figures
+
+if executable("inkscape-figures")
 inoremap <C-f> <Esc>: silent exec '.!inkscape-figures create "'.getline('.').'" "'.b:vimtex.root.'/figures/"'<CR><CR>:w<CR>
 nnoremap <C-f> : silent exec '!inkscape-figures edit "'.b:vimtex.root.'/figures/" > /dev/null 2>&1 &'<CR><CR>:redraw!<CR>
+endif
 
 " --- UltiSnips ---
 
@@ -194,7 +210,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsEditSplit= "horizontal"
 let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips']
 
-let hostname = substitute(system('hostname'), '\n', '', '')
 if hostname == 'nicolas-pc'
     augroup ultisnips_no_auto_expansion
         au!
