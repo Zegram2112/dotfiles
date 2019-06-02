@@ -51,6 +51,7 @@ snippet template "Basic template" b
 \newtheorem{proposition}{Proposición}[section]
 \newtheorem*{note}{Nota}
 \newtheorem{example}{Ejemplo}[section]
+\newtheorem{corollary}{Corolario}[theorem]
 
 \begin{document}
 	$0
@@ -362,12 +363,12 @@ snippet cb "^3" iA
 endsnippet
 
 context "math()"
-snippet el "to the ... power" iA
+snippet ell "to the ... power" iA
 ^{$1}$0
 endsnippet
 
 context "math()"
-snippet el( "to the ... power" iA
+snippet ell( "to the ... power" i
 ^{($1)}$0
 endsnippet
 
@@ -564,7 +565,7 @@ endsnippet
 
 context "math()"
 snippet set "set" wA
-\\{$1\\} $0
+\left\\{$1\right\\} $0
 endsnippet
 
 snippet || "mid" iA
