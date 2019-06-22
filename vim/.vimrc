@@ -46,6 +46,9 @@ Plugin 'ayu-theme/ayu-vim'
 Plugin 'rakr/vim-one'
 " Snippets
 Plugin 'SirVer/ultisnips'
+" Syntax highlighting
+Plugin 'rudes/vim-java'
+Plugin 'sheerun/vim-polyglot'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
