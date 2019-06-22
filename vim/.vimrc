@@ -44,7 +44,6 @@ Plugin 'arcticicestudio/nord-vim'
 Plugin 'drewtempelmeyer/palenight.vim'
 Plugin 'ayu-theme/ayu-vim'
 Plugin 'rakr/vim-one'
-Plugin 'dylanaraps/wal.vim'
 " Snippets
 Plugin 'SirVer/ultisnips'
 
@@ -127,11 +126,7 @@ let &t_ut=''
 
 " --- Colorschemes ---"
 
-if hostname == "nicolas-pc" || hostname == "nicolas-laptop"
-    colorscheme wal
-else
-    colorscheme palenight
-endif
+colorscheme palenight
 
 let ayucolor="light"
 " let ayucolor="mirage"
