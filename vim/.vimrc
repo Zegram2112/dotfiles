@@ -113,7 +113,7 @@ set number
 " Config for statusline
 set laststatus=2
 let g:lightline= {
-    \ 'colorscheme': 'palenight'
+    \ 'colorscheme': 'one'
     \ }
 
 " True colors
@@ -129,13 +129,13 @@ let &t_ut=''
 
 " --- Colorschemes ---"
 
-colorscheme palenight
+colorscheme one
 
 let ayucolor="light"
 " let ayucolor="mirage"
 " let ayucolor="dark"
 " set background=light
-set background=dark
+set background=light
 let g:one_allow_italics = 1
 let g:nord_italic = 1
 let g:nord_underline = 1
