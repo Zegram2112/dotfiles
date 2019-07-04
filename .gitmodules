@@ -1,6 +1,0 @@
-[submodule "kitty/kitty-themes"]
-	path = kitty/kitty-themes
-	url = https://github.com/dexpota/kitty-themes
-[submodule "vim/.vim/bundle/Vundle.vim"]
-	path = vim/.vim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git

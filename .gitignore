@@ -1,5 +1,5 @@
-vim/.vim/bundle/*
-!vim/.vim/bundle/Vundle.vim
+vim/bundle/*
+!vim/bundle/Vundle.vim
 
 # Swap
 [._]*.s[a-v][a-z]
