@@ -4,15 +4,17 @@
 
 # terminal emulator
 super + Return
-	kitty
+	exo-open --launch TerminalEmulator
 
 # program launcher
 super + d
-	rofi -show run
+    rofi_run -r
+super + shift
+    rofi_run -r
 
 # window switcher
 alt + Tab
-    rofi -show window
+    rofi_run w
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -22,22 +24,24 @@ super + Escape
 super + space
     {setxkbmap us , setxkbmap latam}
 
+# quit bspwm
+super + x
+    rofi_run -l
+
 #
 # Function keys
 #
 
-# Raises volume
 XF86AudioRaiseVolume
-    amixer set Master 5%+
-
-# Lowers volume
+    pamixer -i 2
 XF86AudioLowerVolume
-    amixer set Master 5%-
-
-# Mutes
+    pamixer -d 2
 XF86AudioMute
-#amixer set Master toggle
-    amixer -D pulse set Master 1+ toggle
+    pamixer -t
+XF86MonBrightnessUp
+    xbacklight +10
+XF86MonBrightnessDown
+    xbacklight -10
 
 #
 # bspwm hotkeys
