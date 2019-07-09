@@ -51,6 +51,8 @@ modules-left   = bspwm menu
 modules-center = clock
 modules-right  = ${env:POLYBAR_MODULES:coreuse temperature memory pkg network volume}
 
+wm-restack = bspwm
+
 ;=====================================================
 ;     Openbox Bars
 ;=====================================================
