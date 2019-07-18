@@ -34,6 +34,7 @@ snippet template "Basic template" b
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
+\usepackage{minted}
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
@@ -62,6 +63,12 @@ snippet beg "begin{} / end{}" bA
 \\begin{$1}
 	$0
 \\end{$1}
+endsnippet
+
+snippet minted "minted" b
+\\begin{minted}{$1}
+	$0
+\\end{minted}
 endsnippet
 
 
@@ -233,10 +240,12 @@ snip.rv = subprocess.check_output(['wolframscript', '-code', code])
 `
 endsnippet
 
+context "math()"
 snippet == "equals" iA
 &= $1 \\\\
 endsnippet
 
+context "math()"
 snippet != "equals" iA
 \neq 
 endsnippet
