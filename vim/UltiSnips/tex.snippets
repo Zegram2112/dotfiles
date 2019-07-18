@@ -75,7 +75,12 @@ snippet template "Basic template" b
 \usepackage{xifthen}
 \usepackage{pdfpages}
 \usepackage{transparent}
-\usepackage{minted}
+\usepackage{minted, xcolor}
+
+% uncomment this to activate monokai
+% \usemintedstyle{monokai}
+% \definecolor{codeBg}{HTML}{282822}
+% \setminted{bgcolor=codeBg}
 
 \newcommand{\incfig}[1]{%
     \def\svgwidth{\columnwidth}
