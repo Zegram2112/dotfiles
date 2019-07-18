@@ -65,13 +65,6 @@ snippet beg "begin{} / end{}" bA
 \\end{$1}
 endsnippet
 
-snippet minted "minted" b
-\\begin{minted}{$1}
-	$0
-\\end{minted}
-endsnippet
-
-
 priority 100
 snippet ... "ldots" iA
 \ldots
@@ -652,6 +645,16 @@ snippet tt "text" iA
 endsnippet
 
 context "math()"
+snippet rmm "rm text" iA
+\mathrm{$1}$0
+endsnippet
+
+context "math()"
+snippet call "cal text" iA
+\mathcal{$1}$0
+endsnippet
+
+context "math()"
 snippet case "cases" wA
 \begin{cases}
 	$1
@@ -706,6 +709,23 @@ context "math()"
 snippet "(inf|sup)" "inf/sup" riA
 \\`!p snip.rv=match.group(0)`
 endsnippet
+
+context "math()"
+snippet bigo "Big O notation" wA
+\mathcal{O}\left($1\right)$0
+endsnippet
+
+snippet code "minted" bA
+\\begin{minted}{$1}
+	$0
+\\end{minted}
+endsnippet
+
+snippet incode "Inline minted" wA
+\\mintinline{$1}{$2}$0
+endsnippet
+
+
 
 # vim:ft=snippets
 
