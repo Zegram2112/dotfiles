@@ -3,8 +3,8 @@
 ;=====================================================
 
 [section/base]
-include-file = /home/nicolas/.config/polybar/master.conf
-include-file = /home/nicolas/.config/polybar/modules.conf
+include-file = $HOME/.config/polybar/master.conf
+include-file = $HOME/.config/polybar/modules.conf
 
 
 ;=====================================================
