@@ -375,7 +375,7 @@ endsnippet
 # endsnippet
 
 snippet sum "sum" w
-\sum_{n=${1:1}}^{${2:\infty}} ${3:a_n z^n}
+\sum_{${1:i=1}}^{${2:\infty}} ${3:a_n z^n}
 endsnippet
 
 snippet taylor "taylor" w
@@ -428,6 +428,7 @@ snippet ell( "to the ... power" i
 ^{($1)}$0
 endsnippet
 
+context "math()"
 snippet __ "subscript" iA
 _{$1}$0
 endsnippet
@@ -440,10 +441,12 @@ snippet suc "suc" i
 (${1:x}_${2:n})_{${3:$2}\\in${4:\\N}}$0
 endsnippet
 
+context "math()"
 snippet <= "leq" iA
 \le 
 endsnippet
 
+context "math()"
 snippet >= "geq" iA
 \ge 
 endsnippet
