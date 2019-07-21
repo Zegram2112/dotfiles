@@ -4,6 +4,8 @@ install() {
     echo "Installing $1"
     if [[ $2 == "python" ]]; then
         pip install --user $1
+    elif [[ $2 == "pythonsudo" ]]; then
+        sudo pip install $1
     else
         yay -S --needed $1
     fi
@@ -23,8 +25,9 @@ fi
 
 
 # install dependencies
-pckgs=('python vim zathura zathura-pdf-mupdf python-pip rcm bspwm kitty sxhkd texlive-most texlive-lang minted thunar xarchive thunar-archive-plugin plank')
-python_pckgs=('numpy matplotlib inkscape-figures pigments')
+pckgs=('python vim zathura zathura-pdf-mupdf python-pip rcm bspwm kitty sxhkd texlive-most texlive-lang minted thunar xarchiver thunar-archive-plugin plank inkscape')
+python_pckgs=('numpy matplotlib pigments ipython')
+python_sudo_pckgs=('inkscape-figures ipython')
 
 for pckg in ${pckgs[@]}; do
     install $pckg
@@ -33,6 +36,10 @@ done
 for pckg in ${python_pckgs[@]}; do
     install $pckg python
 done
+
+for pckg in ${python_sudo_pckgs[@]}; do
+    install $pckg pythonsudo
+done 
 
 # configurate
 echo "Creating symlinks on $HOME"
