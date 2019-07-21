@@ -1,5 +1,17 @@
 #!/bin/sh
 
+# Detect resolution
+xRes=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
+yRes=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
+
+if [ ${xRes} == 1920 ] ; then 
+    TOP_PADDING=50 
+    BOTTOM_PADDING=70
+else #high res
+    TOP_PADDING=75
+    BOTTOM_PADDING=100
+fi
+
 # set root pointer
 xsetroot -cursor_name left_ptr
 
@@ -26,22 +38,14 @@ bspc monitor -d I II III IV V
 
 bspc config border_width 2
 bspc config window_gap 12
-bspc config top_padding 50
+bspc config top_padding ${TOP_PADDING}
 bspc config right_padding 25
-bspc config bottom_padding 70
+bspc config bottom_padding ${BOTTOM_PADDING}
 bspc config left_padding 25
 
 bspc config -d ^2 window_gap 0
-bspc config -d ^2 top_padding 0
-bspc config -d ^2 right_padding 0
-bspc config -d ^2 bottom_padding 0
-bspc config -d ^2 left_padding 0
 
 bspc config -d ^3 window_gap 0
-bspc config -d ^3 top_padding 0
-bspc config -d ^3 right_padding 0
-bspc config -d ^3 bottom_padding 0
-bspc config -d ^3 left_padding 0
 
 bspc config split_ratio 0.54
 bspc config borderless_monocle true
