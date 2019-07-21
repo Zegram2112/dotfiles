@@ -25,7 +25,7 @@ fi
 
 
 # install dependencies
-pckgs=('python vim zathura zathura-pdf-mupdf python-pip rcm bspwm kitty sxhkd texlive-most texlive-lang minted thunar xarchiver thunar-archive-plugin plank inkscape')
+pckgs=('python vim zathura zathura-pdf-mupdf python-pip rcm bspwm kitty sxhkd texlive-most texlive-lang minted thunar xarchiver thunar-archive-plugin plank inkscape wmname')
 python_pckgs=('numpy matplotlib pigments ipython')
 python_sudo_pckgs=('inkscape-figures ipython')
 
