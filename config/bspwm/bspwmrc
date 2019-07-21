@@ -18,6 +18,9 @@ xfsettingsd &
 # panel
 al-polybar-session &
 
+# fix for java apps
+wmname LG3D
+
 # Set some bsp specific stuff
 bspc monitor -d I II III IV V
 
@@ -58,6 +61,7 @@ bspc config pointer_action3 resize_corner
 bspc rule -a thunar state=floating follow=on
 bspc rule -a firefox desktop='^2'
 bspc rule -a Chromium desktop='^2'
+bspc rule -a zathura state=tiled
 
 # plank
 plank &
