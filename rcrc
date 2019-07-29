@@ -1,3 +1,4 @@
 DOTFILES_DIRS="$HOME/dotfiles"
 SYMLINK_DIRS="vim local/share/plank"
 EXCLUDES="install.sh themes"
+UNDOTTED="bin"
