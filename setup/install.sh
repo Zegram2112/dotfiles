@@ -42,9 +42,6 @@ for pckg in ${python_sudo_pckgs[@]}; do
 done 
 
 # configurate
-echo "Creating symlinks on $HOME"
-ln -s $HOME/dotfiles/rcrc $HOME/.rcrc
-rcup -v
 
 # refresh sxhkd keys
 pkill -USR1 -x sxhkd
@@ -54,6 +51,11 @@ timedatectl set-ntp true
 
 # set one theme
 python $HOME/dotfiles/themes/themes.py one
+
+# create symlinks
+echo "Creating symlinks on $HOME"
+ln -s $HOME/dotfiles/rcrc $HOME/.rcrc
+rcup -v
 
 echo "Finished. Reboot is recommended."
 
