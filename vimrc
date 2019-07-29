@@ -221,13 +221,6 @@ let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsEditSplit= "horizontal"
 let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips']
 
-if hostname == 'nicolas-pc'
-    augroup ultisnips_no_auto_expansion
-        au!
-        au VimEnter * au! UltiSnips_AutoTrigger
-    augroup END
-endif
-
 " --- Shortcuts ---
 
 " move vertically by visual line
