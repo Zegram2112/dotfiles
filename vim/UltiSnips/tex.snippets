@@ -135,12 +135,11 @@ snippet "tr(\d+)" "Add table row of dimension ..." r
 endsnippet
 
 snippet fig "Figure environment" b
-\begin{figure}[${1:htpb}]
+\begin{figure}[${1:htpb}]\label{fig:${5:${3/\W+/-/g}}}
 	\centering
 	${2:\includegraphics[width=0.8\textwidth]{$3}}
 	\caption{${4:$3}}
-	\label{fig:${5:${3/\W+/-/g}}}
-\end{figure}
+	\end{figure}
 endsnippet
 
 snippet enum "Enumerate" bA
@@ -507,7 +506,7 @@ snippet R0+ "R0+" iA
 endsnippet
 
 snippet plot "Plot" w
-\begin{figure}[$1]
+\begin{figure}[$1]\label{${9:$8}}
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
@@ -519,7 +518,6 @@ snippet plot "Plot" w
 		\end{axis}
 	\end{tikzpicture}
 	\caption{$8}
-	\label{${9:$8}}
 \end{figure}
 endsnippet
 
