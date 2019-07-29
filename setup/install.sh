@@ -52,5 +52,8 @@ pkill -USR1 -x sxhkd
 # time synchronization
 timedatectl set-ntp true
 
+# set one theme
+python $HOME/dotfiles/themes/themes.py one
+
 echo "Finished. Reboot is recommended."
 
