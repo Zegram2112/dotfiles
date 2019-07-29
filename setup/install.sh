@@ -49,5 +49,8 @@ rcup -v
 # refresh sxhkd keys
 pkill -USR1 -x sxhkd
 
+# time synchronization
+timedatectl set-ntp true
+
 echo "Finished. Reboot is recommended."
 

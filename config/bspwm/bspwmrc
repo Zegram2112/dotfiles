@@ -27,9 +27,6 @@ al-compositor --start &
 # xfce settings
 xfsettingsd &
 
-# time synchronization
-timedatectl set-ntp true
-
 # panel
 al-polybar-session &
 
