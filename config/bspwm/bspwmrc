@@ -62,7 +62,8 @@ bspc config pointer_action3 resize_corner
 bspc rule -a thunar state=floating follow=on
 bspc rule -a firefox desktop='^2'
 bspc rule -a Chromium desktop='^2'
-bspc rule -a zathura state=tiled
+bspc rule -a Zathura state=tiled
+bspc rule -a Inkscape state=fullscreen focus=on
 
 # plank
 plank &
