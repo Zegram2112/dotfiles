@@ -1,0 +1,10 @@
+#!/usr/bin/bash
+
+if [[ $1 != "" ]]; then
+    mkdir $1
+    mkdir $1/figures
+    inkscape-figures watch
+    cd $1
+else
+    echo "Nombre de carpeta inexistente"
+fi
