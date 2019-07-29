@@ -20,3 +20,5 @@ tags
 # Session
 Session.vim
 
+# Compiled files
+*.compiled
