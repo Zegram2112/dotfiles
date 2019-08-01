@@ -162,6 +162,24 @@ snippet desc "Description" b
 \end{description}
 endsnippet
 
+snippet def "Definition" b
+\begin{definition}[$1]
+	$0
+\end{definition}
+endsnippet
+
+snippet eg "Example" b
+\begin{example}[$1]
+	$0
+\end{example}
+endsnippet
+
+snippet th "Theorem" b
+\begin{theorem}[$1]
+	$0
+\end{theorem}
+endsnippet
+
 snippet it "Item"
 \item $0
 endsnippet
@@ -760,6 +778,18 @@ priority 100
 context "math()"
 snippet "([a-zA-Z])hat" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
+endsnippet
+
+priority 10
+context "math()"
+snippet "vec" "vec" riA
+\vec{$1}$0
+endsnippet
+
+priority 100
+context "math()"
+snippet "([a-zA-Z])vec" "vec" riA
+\vec{`!p snip.rv=match.group(1)`}
 endsnippet
 
 context "math()"
