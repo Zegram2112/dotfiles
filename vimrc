@@ -49,6 +49,8 @@ Plugin 'SirVer/ultisnips'
 " Syntax highlighting
 Plugin 'rudes/vim-java'
 Plugin 'sheerun/vim-polyglot'
+" Auto completion
+Plugin 'ycm-core/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -220,6 +222,10 @@ let g:UltiSnipsJumpForwardTrigger ='<tab>'
 let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 let g:UltiSnipsEditSplit= "horizontal"
 let g:UltiSnipsSnippetDirectories = [$HOME . '/.vim/UltiSnips']
+
+" --- YouCompleteMe ---
+
+let g:ycm_global_ycm_extra_conf = $HOME . '/.vim/.ycm_extra_conf.py'
 
 " --- Shortcuts ---
 
