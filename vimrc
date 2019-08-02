@@ -49,6 +49,7 @@ Plugin 'SirVer/ultisnips'
 " Syntax highlighting
 Plugin 'rudes/vim-java'
 Plugin 'sheerun/vim-polyglot'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 " Auto completion
 Plugin 'ycm-core/YouCompleteMe'
 
