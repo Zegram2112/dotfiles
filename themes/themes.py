@@ -6,7 +6,7 @@ import os
 def refreshPolybar():
     os.system("wmname bspwm")
     os.system("killall polybar")
-    os.system("al-polybar-session")
+    os.system("al-polybar-session -z ~/.config/polybar/sessions/custom-sessionfile")
     os.system("wmname LG3D")
 
 def refreshKitty(kittyGenerator):

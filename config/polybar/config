@@ -47,11 +47,28 @@ inherit = bar/master
 ; Use $ xrandr -q | grep " connected" | cut -d ' ' -f1
 monitor =
 
-modules-left   = clock
+modules-left   = window-title
 modules-center = bspwm
 modules-right  = ${env:POLYBAR_MODULES:temperature pkg network volume}
 
 wm-restack = bspwm
+
+[bar/bspwm-bar-bottomright]
+inherit = bar/master
+monitor =
+modules-center = clock
+module-margin = 0
+bottom = true
+width = 10%
+wm-restack = bspwm
+[bar/bspwm-bar-bottomleft]
+inherit = bar/master
+monitor = 
+bottom = true
+width = 10%
+wm-restack = bspwm
+offset-x = 80%
+
 
 ;=====================================================
 ;     Openbox Bars
