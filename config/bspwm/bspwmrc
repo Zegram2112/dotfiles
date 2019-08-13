@@ -5,7 +5,7 @@ xRes=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
 yRes=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
 
 if [ ${xRes} == 1920 ] ; then 
-    TOP_PADDING=50 
+    TOP_PADDING=25
     BOTTOM_PADDING=70
 else #high res
     TOP_PADDING=75
@@ -36,9 +36,9 @@ bspc monitor -d I II III IV V
 bspc config border_width 2
 bspc config window_gap 12
 bspc config top_padding ${TOP_PADDING}
-bspc config right_padding 25
+bspc config right_padding 0
 bspc config bottom_padding ${BOTTOM_PADDING}
-bspc config left_padding 25
+bspc config left_padding 0
 
 bspc config -d ^2 window_gap 0
 
